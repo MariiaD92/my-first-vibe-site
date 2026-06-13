@@ -21,20 +21,135 @@ body {
   overflow-x: hidden;
 }
 
-body > * {
+body > *:not(.site-header) {
   max-width: min(36rem, 100%);
   margin-left: auto;
   margin-right: auto;
+}
+
+.site-header {
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #d1d5db;
+  margin: calc(-1 * clamp(1.25rem, 5vw, 2rem)) calc(-1 * clamp(1rem, 4vw, 1.5rem)) 2rem;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  max-width: min(36rem, 100%);
+  margin: 0 auto;
+}
+
+.nav-tab {
+  padding: 0.85rem 1.25rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav-tab:hover {
+  color: #1a1a1a;
+}
+
+.nav-tab.active {
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+.nav-tab.active:hover {
+  color: #1a1a1a;
 }
 
 h1 {
   font-size: clamp(1.75rem, 5vw, 2.5rem);
   line-height: 1.2;
   margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.profile-photo {
+  width: clamp(8rem, 40vw, 10rem);
+  height: clamp(8rem, 40vw, 10rem);
+  aspect-ratio: 1;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border: 3px solid #1a365d;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
 }
 
 p {
   font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+.intro {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.about-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-section h2 {
+  font-size: 1.25rem;
+  color: #1a365d;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.about-section ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.about-section li {
+  margin-bottom: 0.35rem;
+}
+
+.job {
+  margin-bottom: 1.5rem;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+}
+
+.job .dates {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0 0 0.35rem;
+}
+
+.job .school {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
 }
 
 a {
