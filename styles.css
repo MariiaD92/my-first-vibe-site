@@ -45,7 +45,8 @@ a:hover {
   color: #2c5282;
 }
 
-button {
+button,
+a.button {
   background-color: #1a365d;
   color: white;
   border: none;
@@ -56,14 +57,19 @@ button {
   transition: background-color 0.2s ease;
   min-height: 44px;
   min-width: 44px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-button:hover {
+button:hover,
+a.button:hover {
   background-color: #2c5282;
+  color: white;
 }
 
 @media (max-width: 480px) {
-  button {
+  button,
+  a.button {
     display: block;
     width: 100%;
     max-width: 20rem;
